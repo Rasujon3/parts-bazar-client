@@ -7,6 +7,7 @@ import FounderInfo from "./FounderInfo";
 import Services from "./Services";
 import Reviews from "./Reviews";
 import Carousel from "./Carousel";
+import BusinessSummary from "./BusinessSummary";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Info></Info>
       <Services></Services>
       <FounderInfo></FounderInfo>
+      <BusinessSummary />
       <Reviews></Reviews>
       <Contact></Contact>
       <Footer></Footer>
