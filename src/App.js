@@ -18,6 +18,7 @@ import RequireAdmin from "./Pages/Login/requireAdmin";
 import AddDoctor from "./Pages/Dashboard/AddDoctor";
 import ManageDoctors from "./Pages/Dashboard/ManageDoctors";
 import Payment from "./Pages/Dashboard/Payment";
+import Purchase from "./Pages/Home/Purchase";
 
 function App() {
   return (
@@ -34,6 +35,14 @@ function App() {
             </RequireAuth>
           }
         />
+        <Route
+          path="purchase/:id"
+          element={
+            <RequireAuth>
+              <Purchase />
+            </RequireAuth>
+          }
+        ></Route>
         <Route
           path="dashboard"
           element={

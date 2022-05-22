@@ -1,0 +1,20 @@
+[
+  {
+    "_id": 1,
+    "name": "Winson Herry",
+    "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptates quo incidunt harum minus mollitia!",
+    "rating": 5
+  },
+  {
+    "_id": 2,
+    "name": "Ruhul Amin",
+    "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptates quo incidunt harum minus mollitia!",
+    "rating": 4
+  },
+  {
+    "_id": 3,
+    "name": "Asaraful Islam",
+    "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptates quo incidunt harum minus mollitia!",
+    "rating": 3
+  }
+]
