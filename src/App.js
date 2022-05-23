@@ -21,6 +21,7 @@ import Payment from "./Pages/Dashboard/Payment";
 import Purchase from "./Pages/Home/Purchase";
 import Blogs from "./Pages/Home/Blogs";
 import MyPortfolio from "./Pages/Home/MyPortfolio";
+import NotFound from "./Pages/Shared/NotFound";
 
 function App() {
   return (
@@ -86,6 +87,7 @@ function App() {
         </Route>
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer />
     </div>
