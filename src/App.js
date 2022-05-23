@@ -19,6 +19,8 @@ import AddDoctor from "./Pages/Dashboard/AddDoctor";
 import ManageDoctors from "./Pages/Dashboard/ManageDoctors";
 import Payment from "./Pages/Dashboard/Payment";
 import Purchase from "./Pages/Home/Purchase";
+import Blogs from "./Pages/Home/Blogs";
+import MyPortfolio from "./Pages/Home/MyPortfolio";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="blogs" element={<Blogs />} />
+        <Route path="portfolio" element={<MyPortfolio />} />
         <Route
           path="appointment"
           element={

@@ -20,7 +20,7 @@ const Navbar = () => {
       {/* <li>
         <Link to="/appointment">Appointment</Link>
       </li> */}
-      <li>
+      {/* <li>
         <Link to="/review">Review</Link>
       </li>
       <li>
@@ -28,6 +28,12 @@ const Navbar = () => {
       </li>
       <li>
         <Link to="/about">About</Link>
+      </li> */}
+      <li>
+        <Link to="/blogs">Blogs</Link>
+      </li>
+      <li>
+        <Link to="/portfolio">My Portfolio</Link>
       </li>
       {user && (
         <li>
