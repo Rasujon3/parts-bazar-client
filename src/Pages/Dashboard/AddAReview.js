@@ -1,11 +1,8 @@
 import React from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import auth from "./../../firebase.init";
 import { toast } from "react-toastify";
 
 const AddAReview = () => {
-  const [user] = useAuthState(auth);
   const {
     register,
     formState: { errors },
@@ -26,7 +23,8 @@ const AddAReview = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
+        // console.log(result);
+        reset();
         toast.success("Review Added Successfully");
       });
   };
@@ -113,7 +111,11 @@ const AddAReview = () => {
           </label>
         </div>
 
-        <input className="btn w-full max-w-xs" type="submit" value="Add" />
+        <input
+          className="btn w-full max-w-xs"
+          type="submit"
+          value="Add Review"
+        />
       </form>
     </div>
   );

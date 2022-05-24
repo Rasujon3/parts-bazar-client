@@ -25,6 +25,9 @@ import NotFound from "./Pages/Shared/NotFound";
 import MyOrders from "./Pages/Dashboard/MyOrders";
 import AddAReview from "./Pages/Dashboard/AddAReview";
 import MyProfile from "./Pages/Dashboard/MyProfile";
+import ManageAllOrders from "./Pages/Dashboard/ManageAllOrders";
+import AddAProduct from "./Pages/Dashboard/AddAProduct";
+import ManageProducts from "./Pages/Dashboard/ManageProducts";
 
 function App() {
   return (
@@ -87,6 +90,30 @@ function App() {
             element={
               <RequireAdmin>
                 <ManageDoctors />
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="manageAllOrders"
+            element={
+              <RequireAdmin>
+                <ManageAllOrders />
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="addAProduct"
+            element={
+              <RequireAdmin>
+                <AddAProduct />
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="manageProducts"
+            element={
+              <RequireAdmin>
+                <ManageProducts />
               </RequireAdmin>
             }
           ></Route>
