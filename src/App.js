@@ -22,6 +22,9 @@ import Purchase from "./Pages/Home/Purchase";
 import Blogs from "./Pages/Home/Blogs";
 import MyPortfolio from "./Pages/Home/MyPortfolio";
 import NotFound from "./Pages/Shared/NotFound";
+import MyOrders from "./Pages/Dashboard/MyOrders";
+import AddAReview from "./Pages/Dashboard/AddAReview";
+import MyProfile from "./Pages/Dashboard/MyProfile";
 
 function App() {
   return (
@@ -59,6 +62,9 @@ function App() {
           <Route index element={<MyAppointments />}></Route>
           <Route path="review" element={<MyReview />}></Route>
           <Route path="history" element={<MyHistory />}></Route>
+          <Route path="myOrders" element={<MyOrders />}></Route>
+          <Route path="addAReview" element={<AddAReview />}></Route>
+          <Route path="myProfile" element={<MyProfile />}></Route>
           <Route path="payment/:id" element={<Payment />}></Route>
           <Route
             path="users"

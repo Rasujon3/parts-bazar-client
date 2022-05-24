@@ -8,6 +8,9 @@ const Review = ({ review }) => {
         <div className="flex items-center">
           <div>
             <h4 className="text-xl">{review.name}</h4>
+            <p>
+              Rating: {review.rating} <small>out of 5</small>{" "}
+            </p>
             <p>“ {review.review} ”</p>
           </div>
         </div>
