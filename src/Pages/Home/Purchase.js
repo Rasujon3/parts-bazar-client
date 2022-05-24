@@ -38,8 +38,10 @@ const Purchase = () => {
     const availableQuantity = parseFloat(event.target.availableQuantity.value);
     const userQuantity = parseFloat(event.target.userQuantity.value);
 
-    if (userQuantity < 1000) {
-      toast.error("Quantity must be greater or equal than 1000");
+    if (userQuantity < minimumOrderQuantity) {
+      toast.error(
+        `Quantity must be greater or equal than ${minimumOrderQuantity}`
+      );
       return;
     } else if (userQuantity > availableQuantity) {
       toast.error(`Quantity can't greater than ${availableQuantity}`);

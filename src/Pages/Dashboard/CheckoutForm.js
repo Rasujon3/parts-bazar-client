@@ -1,8 +1,11 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import React, { useEffect, useState } from "react";
 import Loading from "../Shared/Loading";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
-const CheckoutForm = ({ appointment }) => {
+const CheckoutForm = ({ order }) => {
+  const [user] = useAuthState(auth);
   const stripe = useStripe();
   const elements = useElements();
   const [cardError, setCardError] = useState("");
@@ -11,7 +14,8 @@ const CheckoutForm = ({ appointment }) => {
   const [transactionId, setTransactionId] = useState("");
   const [clientSecret, setClientSecret] = useState("");
 
-  const { _id, price, patient, patientName } = appointment;
+  const { _id, email, partName, price, userQuantity } = order;
+  const payablePrice = price * userQuantity;
 
   useEffect(() => {
     const url = `http://localhost:5000/create-payment-intent`;
@@ -21,7 +25,7 @@ const CheckoutForm = ({ appointment }) => {
         "content-type": "application/json",
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
-      body: JSON.stringify({ price }),
+      body: JSON.stringify({ payablePrice }),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -30,7 +34,7 @@ const CheckoutForm = ({ appointment }) => {
         }
         // console.log(data);
       });
-  }, [price]);
+  }, [payablePrice]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -58,8 +62,8 @@ const CheckoutForm = ({ appointment }) => {
         payment_method: {
           card: card,
           billing_details: {
-            name: patientName,
-            email: patient,
+            name: user?.displayName,
+            email: email,
           },
         },
       });
@@ -78,7 +82,7 @@ const CheckoutForm = ({ appointment }) => {
         appointment: _id,
         transactionId: paymentIntent.id,
       };
-      const url = `http://localhost:5000/booking/${_id}`;
+      const url = `http://localhost:5000/purchase/${_id}`;
       fetch(url, {
         method: "PATCH",
         headers: {
