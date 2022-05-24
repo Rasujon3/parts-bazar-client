@@ -133,7 +133,7 @@ const Login = () => {
           </form>
           <p className="text-center">
             <small>
-              New to Dortors Portal?{" "}
+              New to APM?{" "}
               <Link className="text-primary" to="/signup">
                 Create New Account
               </Link>

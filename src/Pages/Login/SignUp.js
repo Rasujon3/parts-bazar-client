@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import {
   useCreateUserWithEmailAndPassword,
+  useSendEmailVerification,
   useSignInWithGoogle,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
@@ -9,6 +10,7 @@ import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
 import { Link, useNavigate } from "react-router-dom";
 import useToken from "./../../hooks/useToken";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -23,6 +25,9 @@ const SignUp = () => {
 
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+  const [sendEmailVerification, sending, verificationError] =
+    useSendEmailVerification(auth);
+
   const [token] = useToken(user || gUser);
 
   const navigate = useNavigate();
@@ -30,7 +35,8 @@ const SignUp = () => {
   const onSubmit = async (data) => {
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
-    console.log("update done");
+    await sendEmailVerification();
+    // console.log("update done");
     // navigate("/appointment");
   };
 
@@ -39,15 +45,16 @@ const SignUp = () => {
   useEffect(() => {
     if (token) {
       // console.log(user || gUser);
+      toast.success("Registration Successful");
       navigate("/");
     }
   }, [navigate, token]);
 
-  if (loading || gLoading || updating) {
+  if (loading || gLoading || updating || sending) {
     return <Loading />;
   }
 
-  if (error || gError || updateError) {
+  if (error || gError || updateError || verificationError) {
     signInError = (
       <p className="text-red-500 text-center">
         <small>
