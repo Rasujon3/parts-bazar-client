@@ -35,14 +35,14 @@ const UpdateProfile = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
-        console.log(result.modifiedCount);
-        if (result.modifiedCount === 0) {
+        // console.log(result);
+        // console.log(result.modifiedCount);
+        if (result.modifiedCount === 0 && result.upsertedCount !== 1) {
           toast.error("Not update your profile");
           return;
         }
-        // reset();
         toast.success("Profile Updated Successfully");
+        reset();
       });
   };
   return (

@@ -26,10 +26,30 @@ const MyProfile = () => {
       <h2 className="text-2xl">My Profile</h2>
       <p>Name: {user?.displayName}</p>
       <p>Email: {user?.email}</p>
-      <p>Education: {myProfile[0]?.updatedUser?.education}</p>
-      <p>Location: {myProfile[0]?.updatedUser?.location}</p>
-      <p>Phone: {myProfile[0]?.updatedUser?.phone}</p>
-      <p>LinkedIn Profile Link: {myProfile[0]?.updatedUser?.linkedin}</p>
+      <p>
+        Education:{" "}
+        {myProfile[0]?.updatedUser?.education
+          ? myProfile[0]?.updatedUser?.education
+          : "Not Found"}
+      </p>
+      <p>
+        Location:{" "}
+        {myProfile[0]?.updatedUser?.location
+          ? myProfile[0]?.updatedUser?.location
+          : "Not Found"}
+      </p>
+      <p>
+        Phone:{" "}
+        {myProfile[0]?.updatedUser?.phone
+          ? myProfile[0]?.updatedUser?.phone
+          : "Not Found"}
+      </p>
+      <p>
+        LinkedIn Profile Link:{" "}
+        {myProfile[0]?.updatedUser?.linkedin
+          ? myProfile[0]?.updatedUser?.linkedin
+          : "Not Found"}
+      </p>
       <button
         className="btn w-full max-w-xs"
         onClick={() => navigate("/dashboard/updateProfile")}
