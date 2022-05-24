@@ -28,6 +28,7 @@ import MyProfile from "./Pages/Dashboard/MyProfile";
 import ManageAllOrders from "./Pages/Dashboard/ManageAllOrders";
 import AddAProduct from "./Pages/Dashboard/AddAProduct";
 import ManageProducts from "./Pages/Dashboard/ManageProducts";
+import UpdateProfile from "./Pages/Dashboard/UpdateProfile";
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
           <Route path="myOrders" element={<MyOrders />}></Route>
           <Route path="addAReview" element={<AddAReview />}></Route>
           <Route path="myProfile" element={<MyProfile />}></Route>
+          <Route path="updateProfile" element={<UpdateProfile />}></Route>
           <Route path="payment/:id" element={<Payment />}></Route>
           <Route
             path="users"
