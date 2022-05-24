@@ -39,7 +39,7 @@ const SignUp = () => {
   useEffect(() => {
     if (token) {
       // console.log(user || gUser);
-      navigate("/appointment");
+      navigate("/");
     }
   }, [navigate, token]);
 

@@ -63,7 +63,8 @@ function App() {
             </RequireAuth>
           }
         >
-          <Route index element={<MyAppointments />}></Route>
+          {/* <Route index element={<MyAppointments />}></Route> */}
+          <Route index element={<MyProfile />}></Route>
           <Route path="review" element={<MyReview />}></Route>
           <Route path="history" element={<MyHistory />}></Route>
           <Route path="myOrders" element={<MyOrders />}></Route>
