@@ -21,7 +21,7 @@ const FounderInfo = () => {
         <h3 className="text-xl text-primary font-bold">Guido Gerritsen</h3>
         <h2 className="text-3xl text-white py-5">CEO & Founder</h2>
         <p className="text-white pb-5">
-          As founder and managing director of APM, I personally guarantee the
+          As founder and managing director of PB, I personally guarantee the
           best quality of our products. Please watch our corporate video to see
           the way we ensure the best products.
         </p>
