@@ -81,44 +81,44 @@ const Purchase = () => {
       <p className="text-primary text-center">
         <small>Your email address: {user?.email}</small>
       </p>
-      {/* <h1 class="text-5xl font-bold">Purchase now!</h1> */}
-      <div class="hero min-h-screen">
-        <div class="hero-content flex-col lg:flex-row">
-          <div class="text-center lg:text-left">
+      {/* <h1 className="text-5xl font-bold">Purchase now!</h1> */}
+      <div className="hero min-h-screen">
+        <div className="hero-content flex-col lg:flex-row">
+          <div className="text-center lg:text-left">
             <img src={img} alt="purchase" />
           </div>
-          <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <div class="card-body">
+          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="card-body">
               <form onSubmit={handleSubmit}>
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">Email</span>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Email</span>
                   </label>
                   <input
                     type="email"
                     name="email"
-                    class="input input-bordered"
+                    className="input input-bordered"
                     value={user?.email || ""}
                     readOnly
                     disabled
                   />
                 </div>
 
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">Phone</span>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Phone</span>
                   </label>
                   <input
                     type="text"
                     placeholder="Phone"
                     name="phone"
-                    class="input input-bordered"
+                    className="input input-bordered"
                   />
                 </div>
 
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">Part Name</span>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Part Name</span>
                   </label>
                   <input
                     type="text"
@@ -126,13 +126,13 @@ const Purchase = () => {
                     value={name || ""}
                     readOnly
                     disabled
-                    class="input input-bordered"
+                    className="input input-bordered"
                   />
                 </div>
 
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">
                       Price <small>(per unit)</small>
                     </span>
                   </label>
@@ -142,13 +142,13 @@ const Purchase = () => {
                     value={price || ""}
                     disabled
                     readOnly
-                    class="input input-bordered"
+                    className="input input-bordered"
                   />
                 </div>
 
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">Minimum Order Quantity</span>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Minimum Order Quantity</span>
                   </label>
                   <input
                     type="text"
@@ -156,13 +156,13 @@ const Purchase = () => {
                     value={minimumOrderQuantity || ""}
                     disabled
                     readOnly
-                    class="input input-bordered"
+                    className="input input-bordered"
                   />
                 </div>
 
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">Available Quantity</span>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Available Quantity</span>
                   </label>
                   <input
                     type="text"
@@ -170,25 +170,25 @@ const Purchase = () => {
                     value={availableQuantity || ""}
                     disabled
                     readOnly
-                    class="input input-bordered"
+                    className="input input-bordered"
                   />
                 </div>
 
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">Quantity</span>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Quantity</span>
                   </label>
                   <input
                     type="number"
                     placeholder="Your Order Quantity"
                     name="userQuantity"
                     required
-                    class="input input-bordered"
+                    className="input input-bordered"
                   />
                 </div>
 
-                <div class="form-control mt-6">
-                  <button class="btn btn-primary">Purchase Now</button>
+                <div className="form-control mt-6">
+                  <button className="btn btn-primary">Purchase Now</button>
                 </div>
               </form>
             </div>

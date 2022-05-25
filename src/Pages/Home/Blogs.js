@@ -9,15 +9,15 @@ const Blogs = () => {
 
       {/*  1 */}
       <div
-        tabindex="0"
-        class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box"
+        tabIndex="0"
+        className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box"
       >
         {/* Question 1 */}
-        <div class="collapse-title text-xl font-medium">
+        <div className="collapse-title text-xl font-medium">
           How will you improve the performance of a React Application?
         </div>
-        <div class="collapse-content">
-          <ul class="list-decimal">
+        <div className="collapse-content">
+          <ul className="list-decimal">
             <li className="ml-6">
               Keeping component state local where necessary.
             </li>
@@ -35,19 +35,19 @@ const Blogs = () => {
 
       {/* 2 */}
       <div
-        tabindex="0"
-        class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mt-2"
+        tabIndex="0"
+        className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mt-2"
       >
         {/* Question 2 */}
-        <div class="collapse-title text-xl font-medium">
+        <div className="collapse-title text-xl font-medium">
           What are the different ways to manage a state in a React application?
         </div>
-        <div class="collapse-content">
+        <div className="collapse-content">
           <p>
             There are four main types of state you need to properly manage in
             your React apps:
           </p>
-          <ul class="list-decimal">
+          <ul className="list-decimal">
             <li className="ml-6">Local state.</li>
             <li className="ml-6">Global state.</li>
             <li className="ml-6">Server state.</li>
@@ -58,14 +58,14 @@ const Blogs = () => {
 
       {/*  3 */}
       <div
-        tabindex="0"
-        class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mt-2"
+        tabIndex="0"
+        className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mt-2"
       >
         {/* Question 1 */}
-        <div class="collapse-title text-xl font-medium">
+        <div className="collapse-title text-xl font-medium">
           How does prototypical inheritance work?
         </div>
-        <div class="collapse-content">
+        <div className="collapse-content">
           <p>
             The Prototypal Inheritance is a feature in javascript used to add
             methods and properties in objects. It is a method by which an object
@@ -78,14 +78,14 @@ const Blogs = () => {
 
       {/* 4 */}
       <div
-        tabindex="0"
-        class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mt-2"
+        tabIndex="0"
+        className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mt-2"
       >
         {/* Question 4 */}
-        <div class="collapse-title text-xl font-medium">
+        <div className="collapse-title text-xl font-medium">
           Why you do not set the state directly in React?
         </div>
-        <div class="collapse-content">
+        <div className="collapse-content">
           <p>
             React will then look at the virtual DOM, it also has a copy of the
             old virtual DOM, that is why we shouldn't update the state directly,
@@ -97,15 +97,15 @@ const Blogs = () => {
 
       {/* 6 */}
       <div
-        tabindex="0"
-        class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mt-2"
+        tabIndex="0"
+        className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mt-2"
       >
         {/* Question 6 */}
-        <div class="collapse-title text-xl font-medium">
+        <div className="collapse-title text-xl font-medium">
           What is a unit test? Why should write unit tests?
         </div>
-        <div class="collapse-content">
-          <ul class="list-disc">
+        <div className="collapse-content">
+          <ul className="list-disc">
             <li className="ml-6">
               Unit testing is a software development process in which the
               smallest testable parts of an application, called units, are

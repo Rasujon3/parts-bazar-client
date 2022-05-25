@@ -61,7 +61,7 @@ const AddAReview = () => {
             <span className="label-text">Rating</span>
           </label>
           <select
-            class="select w-full max-w-xs"
+            className="select w-full max-w-xs"
             {...register("rating", {
               required: {
                 value: true,

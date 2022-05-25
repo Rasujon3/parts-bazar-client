@@ -3,12 +3,14 @@ import React, { useEffect, useState } from "react";
 import Loading from "../Shared/Loading";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import { toast } from "react-toastify";
 
 const CheckoutForm = ({ order }) => {
   const [user] = useAuthState(auth);
   const stripe = useStripe();
   const elements = useElements();
   const [cardError, setCardError] = useState("");
+  const [stripeError, setStripeError] = useState("");
   const [success, setSuccess] = useState("");
   const [processing, setProcessing] = useState(false);
   const [transactionId, setTransactionId] = useState("");
@@ -29,6 +31,12 @@ const CheckoutForm = ({ order }) => {
     })
       .then((res) => res.json())
       .then((data) => {
+        // console.log(data);
+        if (data?.message) {
+          setStripeError(data?.message);
+          toast.error(data?.message);
+          return;
+        }
         if (data?.clientSecret) {
           setClientSecret(data.clientSecret);
         }
@@ -69,6 +77,7 @@ const CheckoutForm = ({ order }) => {
       });
     if (intentError) {
       setCardError(intentError?.message);
+      console.log(intentError?.message);
       success("");
       setProcessing(false);
     } else {
@@ -125,7 +134,9 @@ const CheckoutForm = ({ order }) => {
           Pay
         </button>
       </form>
-      {cardError && <p className="text-red-500">{cardError}</p>}
+      {(cardError || stripeError) && (
+        <p className="text-red-500">{cardError || stripeError}</p>
+      )}
       {success && (
         <div className="text-green-500">
           <p>{success}</p>

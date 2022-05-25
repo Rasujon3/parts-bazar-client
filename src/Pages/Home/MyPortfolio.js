@@ -4,15 +4,15 @@ import PrimaryButton from "./../Shared/PrimaryButton";
 const MyPortfolio = () => {
   return (
     <div className="mt-12">
-      <div class="hero min-h-screen">
-        <div class="hero-content flex-col lg:flex-row">
+      <div className="hero min-h-screen">
+        <div className="hero-content flex-col lg:flex-row">
           <img
             src="https://i.ibb.co/YZCkmL7/ruhul-amin-sujon.png"
-            class="max-w-sm rounded-lg shadow-2xl"
+            className="max-w-sm rounded-lg shadow-2xl"
             alt="sujon"
           />
           <div>
-            <h1 class="text-5xl font-bold mb-4">Ruhul Amin Sujon</h1>
+            <h1 className="text-5xl font-bold mb-4">Ruhul Amin Sujon</h1>
 
             <p className="mb-1">
               <span className="font-bold">Email:</span> rasujon3@gmail.com
@@ -24,7 +24,7 @@ const MyPortfolio = () => {
             <p className="mb-1">
               <span className="font-bold">Educational Background:</span>
             </p>
-            <ul class="list-decimal">
+            <ul className="list-decimal">
               <li className="ml-6">
                 B.Sc in CSE(Complete) at Sonargaon University
               </li>
@@ -36,7 +36,7 @@ const MyPortfolio = () => {
             <p className="my-1">
               <span className="font-bold">List of Technologies & Skills:</span>
             </p>
-            <ul class="list-decimal">
+            <ul className="list-decimal">
               <li className="ml-6">
                 Front-End-Development: HTML,CSS,Bootstrap,Tailwind,ReactJS
               </li>
@@ -62,7 +62,7 @@ const MyPortfolio = () => {
             <p className="my-1">
               <span className="font-bold">Projects:</span>
             </p>
-            <ul class="list-decimal">
+            <ul className="list-decimal">
               <li className="ml-6 hover:text-yellow-500">
                 <span>
                   <a
@@ -103,7 +103,7 @@ const MyPortfolio = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button class="btn btn-primary mt-2">My Portfolio</button>
+              <button className="btn btn-primary mt-2">My Portfolio</button>
             </a>
           </div>
         </div>
