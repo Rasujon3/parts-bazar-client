@@ -37,7 +37,7 @@ const Payment = () => {
           <h2 className="card-title">Please Pay for {order.partName}</h2>
           <p>
             Your Order:{" "}
-            <span className="text-orange-700">{order.partName}</span> price{" "}
+            <span className="text-orange-700">{order.partName}</span>, price $
             {order.userQuantity * order.price}
           </p>
           <p>Please pay: ${order.userQuantity * order.price}</p>

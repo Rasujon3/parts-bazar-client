@@ -9,12 +9,18 @@ const Purchase = () => {
   const { id } = useParams();
   const [user] = useAuthState(auth);
   const [part, setPart] = useState({});
+  const [userQuantity, setUserQuantity] = useState(0);
+  const [orderError, setOrderError] = useState("");
+  // console.log(parseFloat(userQuantity));
 
   useEffect(() => {
     const url = `http://localhost:5000/part/${id}`;
     fetch(url)
       .then((res) => res.json())
-      .then((data) => setPart(data));
+      .then((data) => {
+        setPart(data);
+        setUserQuantity(parseFloat(data.minimumOrderQuantity));
+      });
   }, [id]);
 
   const {
@@ -25,6 +31,20 @@ const Purchase = () => {
     availableQuantity,
     price,
   } = part;
+
+  useEffect(() => {
+    if (userQuantity > availableQuantity) {
+      setOrderError(`Quantity can't greater than ${availableQuantity}`);
+    } else if (userQuantity < minimumOrderQuantity) {
+      setOrderError(
+        `Quantity must be greater or equal than ${minimumOrderQuantity}`
+      );
+    } else {
+      setOrderError("");
+    }
+  }, [availableQuantity, minimumOrderQuantity, userQuantity]);
+
+  // console.log(availableQuantity);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -67,10 +87,12 @@ const Purchase = () => {
       })
         .then((res) => res.json())
         .then((result) => {
-          console.log(result);
+          // console.log(result);
           toast.success("Purchase Successfully");
         });
     }
+    setUserQuantity(minimumOrderQuantity);
+    event.target.reset();
   };
 
   return (
@@ -182,13 +204,33 @@ const Purchase = () => {
                     type="number"
                     placeholder="Your Order Quantity"
                     name="userQuantity"
+                    value={userQuantity}
+                    onChange={(e) => setUserQuantity(e.target.value)}
                     required
                     className="input input-bordered"
                   />
+                  <label class="label">
+                    {/* {orderError && (
+                      <span className="label-text-alt text-red-500">
+                        {orderError}
+                      </span>
+                    )} */}
+                    <span className="label-text-alt text-red-500">
+                      {orderError}
+                    </span>
+                  </label>
                 </div>
 
                 <div className="form-control mt-6">
-                  <button className="btn btn-primary">Purchase Now</button>
+                  <button
+                    disabled={
+                      userQuantity > availableQuantity ||
+                      userQuantity < minimumOrderQuantity
+                    }
+                    className="btn btn-primary"
+                  >
+                    Purchase Now
+                  </button>
                 </div>
               </form>
             </div>
