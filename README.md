@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Laptop Village
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [Project Live Link](https://assignment-11-9c7c9.web.app/)
 
-## Available Scripts
+[https://assignment-11-9c7c9.web.app/](https://assignment-11-9c7c9.web.app/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+# Short Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## This website is mainly a laptop warehouse website. You can see some products in home page. You can manage the quantity of products. You can increase & decrease products quantity and also can delete products. You can add products and also can see products which you add in my items page. Full authentication system based on firebase & hosting this project in firebase. Using MongoDb database & Node JS use for backend for this project.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project features and functionality
 
-### `npm test`
+- Using Email Password login & registration system in this project.
+- Also using Google login & registration system in this project.
+- Protecting the My Items, Manage Inventory & Add Inventory page as though without login can't access this page.
+- Forget password functionality implemented in this project.
+- In Forget password page, I use toast to show success message.
+- In Home page, there are 6 sections, those are: Banner, Products, About, Facts, Contact & Footer.
+- In Products section, I am trying to show some information of product & have 2 buttons, such as: i. Update Stoke & ii. Delete.
+- After clicking Delete button, you can delete a product.
+- After clicking Update Stoke button, You will redirected in inventory page if you are log in otherwise you will redircet in login page.
+- In inventory page, have some information & 2 buttons. Delivery & Update Product. In Delivery button, you can decrease a quantity & update product button have a modal that have a input form, you can add quantity that is increase this product quantity.
+- Also have Add product page to add a product in this page.
+- Also have My Items page, You can show specificly your products that you add in this page.
+- Also have blogs page, You can show 4 questions & answers in this page.
+- Using Local Storage to store & get accesstoken.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## List of Technologies (Frameworks, libraries)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Using Bootstrap-5 & Vanila CSS for Responsive Design.
+- Using AOS for simple animation.
+- Using axios for API handle.
+- Using Firebase for authentication & hosting.
+- Using React-Firebase-Hooks for implement full authentication system.
+- Using React-Router-DOM for routing.
+- Using React-Toastify for showing simple Toast message in this website.
