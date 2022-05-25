@@ -9,12 +9,15 @@ const MyProfile = () => {
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
   const { data: myProfile, isLoading } = useQuery("myProfile", () =>
-    fetch(`http://localhost:5000/myProfile/${user?.email}`, {
-      method: "GET",
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
-    }).then((res) => res.json())
+    fetch(
+      `https://sujon-assignment12-parts-bazar.herokuapp.com/myProfile/${user?.email}`,
+      {
+        method: "GET",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      }
+    ).then((res) => res.json())
   );
 
   if (isLoading) {

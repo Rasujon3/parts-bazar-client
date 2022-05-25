@@ -12,7 +12,7 @@ const AddAReview = () => {
 
   const onSubmit = async (data) => {
     // console.log(data);
-    const url = `http://localhost:5000/review`;
+    const url = `https://sujon-assignment12-parts-bazar.herokuapp.com/review`;
     fetch(url, {
       method: "POST",
       headers: {

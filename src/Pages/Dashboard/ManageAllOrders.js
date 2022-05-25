@@ -19,7 +19,7 @@ const ManageAllOrders = () => {
     isLoading,
     refetch,
   } = useQuery(["allOrders", user, navigate], () =>
-    fetch(`http://localhost:5000/allOrders`, {
+    fetch(`https://sujon-assignment12-parts-bazar.herokuapp.com/allOrders`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

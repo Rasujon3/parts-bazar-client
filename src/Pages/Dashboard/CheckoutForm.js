@@ -20,7 +20,7 @@ const CheckoutForm = ({ order }) => {
   const payablePrice = price * userQuantity;
 
   useEffect(() => {
-    const url = `http://localhost:5000/create-payment-intent`;
+    const url = `https://sujon-assignment12-parts-bazar.herokuapp.com/create-payment-intent`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -91,7 +91,7 @@ const CheckoutForm = ({ order }) => {
         appointment: _id,
         transactionId: paymentIntent.id,
       };
-      const url = `http://localhost:5000/purchase/${_id}`;
+      const url = `https://sujon-assignment12-parts-bazar.herokuapp.com/purchase/${_id}`;
       fetch(url, {
         method: "PATCH",
         headers: {

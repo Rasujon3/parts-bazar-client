@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 const AllOrdersRow = ({ a, index, setDeletingDoctor, refetch }) => {
   const handleStatusChange = (id) => {
-    const url = `http://localhost:5000/allOrders/${id}`;
+    const url = `https://sujon-assignment12-parts-bazar.herokuapp.com/allOrders/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

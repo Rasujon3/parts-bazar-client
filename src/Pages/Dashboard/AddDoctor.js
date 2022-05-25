@@ -13,7 +13,7 @@ const AddDoctor = () => {
   } = useForm();
 
   const { data: services, isLoading } = useQuery("services", () =>
-    fetch("http://localhost:5000/service", {
+    fetch("https://sujon-assignment12-parts-bazar.herokuapp.com/service", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -47,7 +47,7 @@ const AddDoctor = () => {
             img: img,
           };
           //   sent to your database
-          const url = `http://localhost:5000/doctor`;
+          const url = `https://sujon-assignment12-parts-bazar.herokuapp.com/doctor`;
           fetch(url, {
             method: "POST",
             headers: {

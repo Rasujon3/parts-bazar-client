@@ -25,7 +25,7 @@ const BookingModal = ({ treatment, date, setTreatment, refetch }) => {
       phone: event.target.phone.value,
     };
 
-    const url = `http://localhost:5000/booking`;
+    const url = `https://sujon-assignment12-parts-bazar.herokuapp.com/booking`;
     fetch(url, {
       method: "POST",
       headers: {

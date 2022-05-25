@@ -5,7 +5,7 @@ const ConfirmDelete = ({ deletingDoctor, refetch, setDeletingDoctor }) => {
   //   const { name, email } = deletingDoctor;
   //   console.log(deletingDoctor.partName);
   const handleDelete = () => {
-    const url = `http://localhost:5000/purchase/${deletingDoctor._id}`;
+    const url = `https://sujon-assignment12-parts-bazar.herokuapp.com/purchase/${deletingDoctor._id}`;
     fetch(url, {
       method: "DELETE",
       headers: {

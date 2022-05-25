@@ -19,12 +19,15 @@ const MyOrders = () => {
     isLoading,
     refetch,
   } = useQuery(["orders", user, navigate], () =>
-    fetch(`http://localhost:5000/purchase?email=${user?.email}`, {
-      method: "GET",
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
-    }).then((res) => {
+    fetch(
+      `https://sujon-assignment12-parts-bazar.herokuapp.com/purchase?email=${user?.email}`,
+      {
+        method: "GET",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      }
+    ).then((res) => {
       // console.log(res);
       if (res.status === 401 || res.status === 403) {
         signOut(auth);

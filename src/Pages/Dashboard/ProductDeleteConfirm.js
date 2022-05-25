@@ -9,7 +9,7 @@ const ProductDeleteConfirm = ({
   //   const { name, email } = deletingDoctor;
   //   console.log(deletingDoctor.partName);
   const handleDelete = () => {
-    const url = `http://localhost:5000/part/${deletingDoctor._id}`;
+    const url = `https://sujon-assignment12-parts-bazar.herokuapp.com/part/${deletingDoctor._id}`;
     fetch(url, {
       method: "DELETE",
       headers: {

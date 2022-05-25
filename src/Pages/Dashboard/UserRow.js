@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const UserRow = ({ user, index, refetch }) => {
   const { email, role } = user;
   const makeAdmin = () => {
-    const url = `http://localhost:5000/user/admin/${email}`;
+    const url = `https://sujon-assignment12-parts-bazar.herokuapp.com/user/admin/${email}`;
     fetch(url, {
       method: "PUT",
       headers: {

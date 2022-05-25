@@ -39,7 +39,7 @@ const AddAProduct = () => {
               img: img,
             };
             //   sent to your database
-            const url = `http://localhost:5000/part`;
+            const url = `https://sujon-assignment12-parts-bazar.herokuapp.com/part`;
             fetch(url, {
               method: "POST",
               headers: {

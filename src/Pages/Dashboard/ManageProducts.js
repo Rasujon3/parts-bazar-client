@@ -18,7 +18,7 @@ const ManageProducts = () => {
     isLoading,
     refetch,
   } = useQuery(["product", user, navigate], () =>
-    fetch(`http://localhost:5000/parts`, {
+    fetch(`https://sujon-assignment12-parts-bazar.herokuapp.com/parts`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

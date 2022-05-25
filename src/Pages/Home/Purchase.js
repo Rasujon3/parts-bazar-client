@@ -14,7 +14,7 @@ const Purchase = () => {
   // console.log(parseFloat(userQuantity));
 
   useEffect(() => {
-    const url = `http://localhost:5000/part/${id}`;
+    const url = `https://sujon-assignment12-parts-bazar.herokuapp.com/part/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -77,7 +77,7 @@ const Purchase = () => {
         userQuantity,
       };
 
-      const url = `http://localhost:5000/purchase`;
+      const url = `https://sujon-assignment12-parts-bazar.herokuapp.com/purchase`;
       fetch(url, {
         method: "POST",
         headers: {
@@ -91,8 +91,8 @@ const Purchase = () => {
           toast.success("Purchase Successfully");
         });
     }
-    setUserQuantity(minimumOrderQuantity);
     event.target.reset();
+    setUserQuantity(minimumOrderQuantity);
   };
 
   return (

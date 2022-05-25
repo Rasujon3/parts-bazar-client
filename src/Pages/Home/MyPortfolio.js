@@ -60,7 +60,9 @@ const MyPortfolio = () => {
               </li>
             </ul>
             <p className="my-1">
-              <span className="font-bold">Projects:</span>
+              <span className="font-bold">
+                My Projects: <small>(Click title to visit live link)</small>{" "}
+              </span>
             </p>
             <ul className="list-decimal">
               <li className="ml-6 hover:text-yellow-500">
@@ -103,7 +105,9 @@ const MyPortfolio = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="btn btn-primary mt-2">My Portfolio</button>
+              <button className="btn btn-primary mt-2">
+                Visit My Portfolio
+              </button>
             </a>
           </div>
         </div>

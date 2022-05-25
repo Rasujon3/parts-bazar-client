@@ -24,7 +24,7 @@ const UpdateProfile = () => {
       phone: data.phone,
       email: email,
     };
-    const url = `http://localhost:5000/myProfile/${email}`;
+    const url = `https://sujon-assignment12-parts-bazar.herokuapp.com/myProfile/${email}`;
     fetch(url, {
       method: "PUT",
       headers: {
