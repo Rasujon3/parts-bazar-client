@@ -8,7 +8,7 @@ const Banner = () => {
       <div className="hero-content flex-col lg:flex-row-reverse">
         <img
           src={banner}
-          className="max-w-sm rounded-lg shadow-2xl sm:w-fit"
+          className="sm:max-w-[100%] lg:max-w-sm rounded-lg shadow-2xl sm:w-[70%]"
           alt="chair"
         />
         <div>

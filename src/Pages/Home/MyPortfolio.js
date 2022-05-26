@@ -8,7 +8,7 @@ const MyPortfolio = () => {
         <div className="hero-content flex-col lg:flex-row">
           <img
             src="https://i.ibb.co/YZCkmL7/ruhul-amin-sujon.png"
-            className="max-w-sm rounded-lg shadow-2xl"
+            className="sm:max-w-[100%] lg:max-w-sm rounded-lg shadow-2xl sm:w-[70%]"
             alt="sujon"
           />
           <div>
