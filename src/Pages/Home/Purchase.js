@@ -49,7 +49,7 @@ const Purchase = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const email = event.target.email.value;
-    const phone = event.target.phone.value;
+    const address = event.target.address.value;
     const partName = event.target.partName.value;
     const price = parseFloat(event.target.price.value);
     const minimumOrderQuantity = parseFloat(
@@ -69,7 +69,7 @@ const Purchase = () => {
     } else {
       const purchase = {
         email,
-        phone,
+        address,
         partName,
         price,
         minimumOrderQuantity,
@@ -128,12 +128,13 @@ const Purchase = () => {
 
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Phone</span>
+                    <span className="label-text">Address</span>
                   </label>
-                  <input
+                  <textarea
                     type="text"
-                    placeholder="Phone"
-                    name="phone"
+                    placeholder="Address"
+                    required
+                    name="address"
                     className="input input-bordered"
                   />
                 </div>
