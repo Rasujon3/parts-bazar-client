@@ -11,7 +11,7 @@
 ### This website is mainly a parts selling website. You can see some parts in home page. You can purchase the parts. You can increase & decrease parts quantity and also can delete your purchase. It has a admin dashboard panel, admin can add & delete parts & also can make admon of any user.Admin also can show all orders and shipped or delete the order. User can see this order & can pay for this order with any internatial visa or debit card. Full authentication system based on firebase & hosting this project in firebase. Using MongoDb database & Node JS use for backend for this project.
 
 #### Project Screenshots
-<img width="300" alt="iMAGE1" src="https://i.ibb.co/KWSrTm0/PARTSBAZAR.png">|<img width="300" alt="IMAGE2" src="https://i.ibb.co/8Mr2QB2/PARTSBAZAR3.png">|<img width="300" alt="IMAGE3" src="https://i.ibb.co/tZx3Mkv/PARTSBAZAR2.png">
+<img width="280" alt="iMAGE1" src="https://i.ibb.co/KWSrTm0/PARTSBAZAR.png">|<img width="280" alt="IMAGE2" src="https://i.ibb.co/8Mr2QB2/PARTSBAZAR3.png">|<img width="280" alt="IMAGE3" src="https://i.ibb.co/tZx3Mkv/PARTSBAZAR2.png">
 
 ## Project features and functionality
 
